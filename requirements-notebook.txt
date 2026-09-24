@@ -1,0 +1,5 @@
+-r requirements.txt
+scikit-learn>=1.4
+ipykernel>=6.29
+plotly>=5.22
+kaleido>=0.2

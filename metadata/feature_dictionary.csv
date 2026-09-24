@@ -1,0 +1,159 @@
+field,role,type,unit_or_range,transform,definition
+elapsed_since_start_ms,core_runtime_feature,number,milliseconds,log1p_then_robust_scale,Monotonic time from observed process start
+elapsed_since_start_ms__missing,missingness_indicator,integer,0 or 1,none,1 when elapsed_since_start_ms was unavailable; 0 otherwise.
+working_set_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Resident working set
+working_set_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when working_set_bytes was unavailable; 0 otherwise.
+private_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Process-private committed bytes
+private_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when private_bytes was unavailable; 0 otherwise.
+virtual_size_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Reserved plus committed virtual address space
+virtual_size_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when virtual_size_bytes was unavailable; 0 otherwise.
+pagefile_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Process page-file-backed commitment
+pagefile_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when pagefile_bytes was unavailable; 0 otherwise.
+peak_working_set_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Peak resident working set observed by the OS
+peak_working_set_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when peak_working_set_bytes was unavailable; 0 otherwise.
+handle_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Open process handle count
+handle_count__missing,missingness_indicator,integer,0 or 1,none,1 when handle_count was unavailable; 0 otherwise.
+thread_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Live thread count
+thread_count__missing,missingness_indicator,integer,0 or 1,none,1 when thread_count was unavailable; 0 otherwise.
+thread_count_delta,core_runtime_feature,integer,{},signed_log1p_absolute_then_robust_scale,Change since the prior valid snapshot in the same run
+thread_count_delta__missing,missingness_indicator,integer,0 or 1,none,1 when thread_count_delta was unavailable; 0 otherwise.
+cpu_user_delta_ms,core_runtime_feature,number,milliseconds,adjacent_delta_then_log1p_then_robust_scale,User CPU time added since prior valid snapshot
+cpu_user_delta_ms__missing,missingness_indicator,integer,0 or 1,none,1 when cpu_user_delta_ms was unavailable; 0 otherwise.
+cpu_kernel_delta_ms,core_runtime_feature,number,milliseconds,adjacent_delta_then_log1p_then_robust_scale,Kernel CPU time added since prior valid snapshot
+cpu_kernel_delta_ms__missing,missingness_indicator,integer,0 or 1,none,1 when cpu_kernel_delta_ms was unavailable; 0 otherwise.
+io_read_delta_bytes,core_runtime_feature,integer,bytes,adjacent_delta_then_log1p_then_robust_scale,Read bytes added since prior valid snapshot
+io_read_delta_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when io_read_delta_bytes was unavailable; 0 otherwise.
+io_write_delta_bytes,core_runtime_feature,integer,bytes,adjacent_delta_then_log1p_then_robust_scale,Written bytes added since prior valid snapshot
+io_write_delta_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when io_write_delta_bytes was unavailable; 0 otherwise.
+io_other_delta_bytes,core_runtime_feature,integer,bytes,adjacent_delta_then_log1p_then_robust_scale,Non-read/write I/O bytes added since prior valid snapshot
+io_other_delta_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when io_other_delta_bytes was unavailable; 0 otherwise.
+mapped_region_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Count of queryable virtual-memory regions
+mapped_region_count__missing,missingness_indicator,integer,0 or 1,none,1 when mapped_region_count was unavailable; 0 otherwise.
+committed_region_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Count of committed virtual-memory regions
+committed_region_count__missing,missingness_indicator,integer,0 or 1,none,1 when committed_region_count was unavailable; 0 otherwise.
+executable_region_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Count of committed regions with executable protection
+executable_region_count__missing,missingness_indicator,integer,0 or 1,none,1 when executable_region_count was unavailable; 0 otherwise.
+writable_executable_region_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Count of committed regions simultaneously writable and executable
+writable_executable_region_count__missing,missingness_indicator,integer,0 or 1,none,1 when writable_executable_region_count was unavailable; 0 otherwise.
+private_executable_region_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Count of private committed regions with executable protection
+private_executable_region_count__missing,missingness_indicator,integer,0 or 1,none,1 when private_executable_region_count was unavailable; 0 otherwise.
+executable_private_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Bytes in private committed executable regions
+executable_private_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when executable_private_bytes was unavailable; 0 otherwise.
+writable_executable_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Bytes in writable-executable committed regions
+writable_executable_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when writable_executable_bytes was unavailable; 0 otherwise.
+image_region_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Committed bytes classified as image mappings
+image_region_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when image_region_bytes was unavailable; 0 otherwise.
+mapped_region_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Committed bytes classified as mapped files
+mapped_region_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when mapped_region_bytes was unavailable; 0 otherwise.
+private_region_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Committed bytes classified as private
+private_region_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when private_region_bytes was unavailable; 0 otherwise.
+rwx_region_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Committed regions with `PAGE_EXECUTE_READWRITE`
+rwx_region_count__missing,missingness_indicator,integer,0 or 1,none,1 when rwx_region_count was unavailable; 0 otherwise.
+rwx_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Bytes in `PAGE_EXECUTE_READWRITE` committed regions
+rwx_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when rwx_bytes was unavailable; 0 otherwise.
+rx_private_region_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Private committed regions with `PAGE_EXECUTE_READ`
+rx_private_region_count__missing,missingness_indicator,integer,0 or 1,none,1 when rx_private_region_count was unavailable; 0 otherwise.
+rx_private_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Bytes in private `PAGE_EXECUTE_READ` regions
+rx_private_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when rx_private_bytes was unavailable; 0 otherwise.
+largest_private_executable_region_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Size of the largest private executable committed region
+largest_private_executable_region_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when largest_private_executable_region_bytes was unavailable; 0 otherwise.
+private_executable_region_ge_64k_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Private executable regions at least 64 KiB
+private_executable_region_ge_64k_count__missing,missingness_indicator,integer,0 or 1,none,1 when private_executable_region_ge_64k_count was unavailable; 0 otherwise.
+non_image_executable_bytes,core_runtime_feature,integer,bytes,log1p_then_robust_scale,Executable committed bytes not classified as `MEM_IMAGE`
+non_image_executable_bytes__missing,missingness_indicator,integer,0 or 1,none,1 when non_image_executable_bytes was unavailable; 0 otherwise.
+private_executable_allocation_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Distinct allocation bases among private executable regions
+private_executable_allocation_count__missing,missingness_indicator,integer,0 or 1,none,1 when private_executable_allocation_count was unavailable; 0 otherwise.
+page_fault_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Cumulative soft/hard page faults reported for the process
+page_fault_count__missing,missingness_indicator,integer,0 or 1,none,1 when page_fault_count was unavailable; 0 otherwise.
+module_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Loaded modules returned by `EnumProcessModulesEx`
+module_count__missing,missingness_indicator,integer,0 or 1,none,1 when module_count was unavailable; 0 otherwise.
+non_system_module_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,"Loaded modules whose path is outside System32, SysWOW64, and WinSxS"
+non_system_module_count__missing,missingness_indicator,integer,0 or 1,none,1 when non_system_module_count was unavailable; 0 otherwise.
+tcp_connection_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,"IPv4/IPv6 TCP rows owned by the process in SYN_SENT, SYN_RCVD, or ESTABLISHED"
+tcp_connection_count__missing,missingness_indicator,integer,0 or 1,none,1 when tcp_connection_count was unavailable; 0 otherwise.
+tcp_listening_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,IPv4/IPv6 TCP LISTEN rows owned by the process
+tcp_listening_count__missing,missingness_indicator,integer,0 or 1,none,1 when tcp_listening_count was unavailable; 0 otherwise.
+udp_endpoint_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,IPv4/IPv6 UDP endpoints owned by the process (`GetExtendedUdpTable`)
+udp_endpoint_count__missing,missingness_indicator,integer,0 or 1,none,1 when udp_endpoint_count was unavailable; 0 otherwise.
+rdp_tcp_connection_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,TCP listen/active rows where local or remote port is 3389 (RDP)
+rdp_tcp_connection_count__missing,missingness_indicator,integer,0 or 1,none,1 when rdp_tcp_connection_count was unavailable; 0 otherwise.
+smb_tcp_connection_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,TCP listen/active rows where local or remote port is 445 (SMB)
+smb_tcp_connection_count__missing,missingness_indicator,integer,0 or 1,none,1 when smb_tcp_connection_count was unavailable; 0 otherwise.
+image_path_backed_exec_ratio,core_runtime_feature,number,"{""minimum"":0,""maximum"":1}",fixed_epsilon_logit_then_robust_scale,Executable committed bytes in `MEM_IMAGE` regions with a resolvable mapped path (`GetMappedFileName`) divided by all executable committed bytes; 0 when no executable bytes
+image_path_backed_exec_ratio__missing,missingness_indicator,integer,0 or 1,none,1 when image_path_backed_exec_ratio was unavailable; 0 otherwise.
+peb_image_base_is_private,core_runtime_feature,integer,"{""minimum"":0,""maximum"":1}",log1p_then_robust_scale,1 if PEB `ImageBaseAddress` region type is `MEM_PRIVATE` (classic hollowing residue)
+peb_image_base_is_private__missing,missingness_indicator,integer,0 or 1,none,1 when peb_image_base_is_private was unavailable; 0 otherwise.
+peb_image_base_non_image,core_runtime_feature,integer,"{""minimum"":0,""maximum"":1}",log1p_then_robust_scale,1 if PEB `ImageBaseAddress` is not `MEM_IMAGE`
+peb_image_base_non_image__missing,missingness_indicator,integer,0 or 1,none,1 when peb_image_base_non_image was unavailable; 0 otherwise.
+peb_image_base_executable,core_runtime_feature,integer,"{""minimum"":0,""maximum"":1}",log1p_then_robust_scale,1 if PEB `ImageBaseAddress` is committed executable
+peb_image_base_executable__missing,missingness_indicator,integer,0 or 1,none,1 when peb_image_base_executable was unavailable; 0 otherwise.
+thread_context_private_exec_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Threads whose current EIP/RIP (`GetThreadContext` / `Wow64GetThreadContext`) falls in private executable memory
+thread_context_private_exec_count__missing,missingness_indicator,integer,0 or 1,none,1 when thread_context_private_exec_count was unavailable; 0 otherwise.
+thread_context_unmapped_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Threads whose current EIP/RIP is not in an image or mapped-file region
+thread_context_unmapped_count__missing,missingness_indicator,integer,0 or 1,none,1 when thread_context_unmapped_count was unavailable; 0 otherwise.
+unsigned_image_mapping_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Loaded modules whose Authenticode status is not `Valid` at collection time (collector `>=1.6.0`)
+unsigned_image_mapping_count__missing,missingness_indicator,integer,0 or 1,none,1 when unsigned_image_mapping_count was unavailable; 0 otherwise.
+thread_start_private_exec_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Threads whose queryable start address falls in a private executable region
+thread_start_private_exec_count__missing,missingness_indicator,integer,0 or 1,none,1 when thread_start_private_exec_count was unavailable; 0 otherwise.
+thread_start_unmapped_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Threads whose queryable start address is not in an image or mapped-file region
+thread_start_unmapped_count__missing,missingness_indicator,integer,0 or 1,none,1 when thread_start_unmapped_count was unavailable; 0 otherwise.
+thread_context_image_backed_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Threads whose current EIP/RIP is in an image-backed executable region
+thread_context_image_backed_count__missing,missingness_indicator,integer,0 or 1,none,1 when thread_context_image_backed_count was unavailable; 0 otherwise.
+suspended_thread_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Threads with non-zero suspend count (`NtQueryInformationThread` / `ThreadSuspendCount`)
+suspended_thread_count__missing,missingness_indicator,integer,0 or 1,none,1 when suspended_thread_count was unavailable; 0 otherwise.
+outbound_tcp_connection_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,"Established TCP rows with a non-loopback remote endpoint (C2-oriented, excludes RDP/SMB-only local noise)"
+outbound_tcp_connection_count__missing,missingness_indicator,integer,0 or 1,none,1 when outbound_tcp_connection_count was unavailable; 0 otherwise.
+non_loopback_tcp_connection_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Established TCP rows whose remote address is not loopback
+non_loopback_tcp_connection_count__missing,missingness_indicator,integer,0 or 1,none,1 when non_loopback_tcp_connection_count was unavailable; 0 otherwise.
+distinct_remote_endpoint_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Count of unique remote IPv4 endpoint keys (`addr:port`) on established outbound TCP rows; IPv6 uses `v6:port` keys (no raw addresses stored)
+distinct_remote_endpoint_count__missing,missingness_indicator,integer,0 or 1,none,1 when distinct_remote_endpoint_count was unavailable; 0 otherwise.
+distinct_remote_port_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Count of unique remote TCP ports on established outbound rows
+distinct_remote_port_count__missing,missingness_indicator,integer,0 or 1,none,1 when distinct_remote_port_count was unavailable; 0 otherwise.
+max_outbound_remote_port,core_runtime_feature,integer,"{""minimum"":0,""maximum"":65535}",log1p_then_robust_scale,Maximum remote TCP port observed on established outbound rows
+max_outbound_remote_port__missing,missingness_indicator,integer,0 or 1,none,1 when max_outbound_remote_port was unavailable; 0 otherwise.
+outbound_remote_port_checksum,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Rolling checksum `sum(remote_port * 31 + (addr & 0xFF))` over outbound endpoints; fingerprint without storing IPs
+outbound_remote_port_checksum__missing,missingness_indicator,integer,0 or 1,none,1 when outbound_remote_port_checksum was unavailable; 0 otherwise.
+etw_create_remote_thread_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Cumulative Sysmon/audit events mapped to remote-thread creation targeting this PID during the collection window
+etw_create_remote_thread_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_create_remote_thread_count was unavailable; 0 otherwise.
+etw_cross_process_access_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Cumulative cross-process access events (Sysmon 10 proxy) targeting this PID during the collection window
+etw_cross_process_access_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_cross_process_access_count was unavailable; 0 otherwise.
+etw_image_load_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Cumulative image-load events (Sysmon 7) in this PID during the collection window
+etw_image_load_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_image_load_count was unavailable; 0 otherwise.
+etw_kernel_audit_api_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Cumulative kernel API audit events (Security log) involving this PID when advanced auditing is enabled
+etw_kernel_audit_api_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_kernel_audit_api_count was unavailable; 0 otherwise.
+etw_syscall_event_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Total matched ETW/event-log telemetry events for this PID during the collection window
+etw_syscall_event_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_syscall_event_count was unavailable; 0 otherwise.
+etw_distinct_event_id_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,"Count of distinct `(event_id, log_name)` pairs observed for this PID (syscall/API diversity proxy)"
+etw_distinct_event_id_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_distinct_event_id_count was unavailable; 0 otherwise.
+etw_virtual_alloc_ex_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Per-API count from Sysmon CallTrace parsing and/or `Microsoft-Windows-Kernel-Audit-API-Calls` task IDs
+etw_virtual_alloc_ex_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_virtual_alloc_ex_count was unavailable; 0 otherwise.
+etw_write_process_memory_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Per-API count for cross-process memory writes
+etw_write_process_memory_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_write_process_memory_count was unavailable; 0 otherwise.
+etw_nt_write_virtual_memory_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Per-API count for `NtWriteVirtualMemory` in CallTrace / kernel audit
+etw_nt_write_virtual_memory_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_nt_write_virtual_memory_count was unavailable; 0 otherwise.
+etw_virtual_protect_ex_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Per-API count for `VirtualProtectEx`
+etw_virtual_protect_ex_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_virtual_protect_ex_count was unavailable; 0 otherwise.
+etw_nt_create_thread_ex_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Per-API count for `NtCreateThreadEx`
+etw_nt_create_thread_ex_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_nt_create_thread_ex_count was unavailable; 0 otherwise.
+etw_nt_queue_apc_thread_count,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Per-API count for `NtQueueApcThread` / APC staging
+etw_nt_queue_apc_thread_count__missing,missingness_indicator,integer,0 or 1,none,1 when etw_nt_queue_apc_thread_count was unavailable; 0 otherwise.
+kernel_audit_api_sequence_length,core_runtime_feature,integer,"{""minimum"":0}",log1p_then_robust_scale,Length of the ordered API/syscall token sequence captured during collection
+kernel_audit_api_sequence_length__missing,missingness_indicator,integer,0 or 1,none,1 when kernel_audit_api_sequence_length was unavailable; 0 otherwise.
+wx_region_ratio,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,Writable-executable regions divided by executable regions.
+priv_exec_region_ratio,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,Private executable regions divided by executable regions.
+wx_bytes_ratio,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,Writable-executable bytes divided by private bytes plus one.
+exec_private_bytes_ratio,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,Executable private bytes divided by private bytes plus one.
+cap_has_wx,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when at least one writable-executable region is present.
+cap_has_private_exec,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when at least one private executable region is present.
+cap_has_rwx,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when at least one PAGE_EXECUTE_READWRITE region is present.
+cap_has_rx_private,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when at least one private executable-read region is present.
+cap_has_tcp,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when at least one active TCP connection is present.
+cap_has_udp,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when at least one UDP endpoint is present.
+cap_has_rdp_tcp,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when an RDP-port TCP row is present.
+cap_has_smb_tcp,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when an SMB-port TCP row is present.
+cap_has_non_system_module,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when a module outside standard Windows system paths is present.
+cap_peb_image_base_private,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when the PEB image base is in private memory.
+cap_peb_image_base_non_image,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when the PEB image base is not MEM_IMAGE.
+cap_thread_context_private_exec,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when a thread instruction pointer is in private executable memory.
+cap_thread_start_private_exec,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when a queryable thread start is in private executable memory.
+cap_thread_start_unmapped,derived_runtime_feature,number,ratio or 0/1 flag,derived before modelling,1 when a queryable thread start is outside image or mapped memory.

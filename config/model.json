@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "seed": 24032026,
+  "feature_tier": "core_required",
+  "optional_features": [],
+  "minimum_optional_availability_fraction": 0.95,
+  "logit_epsilon": 1e-06,
+  "scaled_clip": 20.0,
+  "architecture": {
+    "embedding_dim": 8,
+    "encoder_hidden_sizes": [64, 32],
+    "latent_dim": 16,
+    "decoder_hidden_sizes": [32, 64]
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "early_stopping_patience": 10,
+    "early_stopping_min_delta": 1e-06
+  },
+  "threshold": {
+    "benign_validation_quantile": 0.99
+  },
+  "run_score_percentile": 95.0,
+  "minimum_valid_snapshots": 10,
+  "minimum_benign_validation_groups": 2,
+  "bootstrap_replicates": 1000
+}

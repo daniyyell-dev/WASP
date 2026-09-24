@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "Please cite the WASP dataset and associated empirical evaluation."
+title: "WASP reproducibility code"
+type: software
+version: 0.2.1
+date-released: "2026-09-14"
+authors:
+  - family-names: "Jeremiah"
+    given-names: "Daniel"
+    affiliation: "Forensic and Cyber Security Research Centre, Asia Pacific University of Technology and Innovation, Kuala Lumpur, Malaysia"
+    email: "TP091738@mail.apu.edu.my"
+  - family-names: "Rafiq"
+    given-names: "Husnain"
+    affiliation: "Department of Computer and Information Sciences, Northumbria University, Newcastle upon Tyne NE1 8ST, UK"
+    email: "husnain2.rafiq@northumbria.ac.uk"
+  - family-names: "Ta"
+    given-names: "Vinh Thong"
+    affiliation: "Centre for Defence and Security Management and Informatics, Cranfield University, Bedford MK43 0AL, UK"
+    email: "Vinh.Ta@cranfield.ac.uk"
+  - family-names: "Okoyeigbo"
+    given-names: "Obinna"
+    affiliation: "Department of Computer Science, Edge Hill University, St Helens Road, Ormskirk, Lancashire L39 4QP, United Kingdom"
+    email: "obinna.okoyeigbo@edgehill.ac.uk"
+  - family-names: "Akande"
+    given-names: "Jamiu"
+    affiliation: "Center for Cyberspace Studies, Nasarawa State University, Keffi, Nigeria"
+    email: "akandejamiu5044@nsuk.edu.ng"
+license: MIT
+repository-code: "https://github.com/daniyyell-dev/WASP"
+preferred-citation:
+  type: dataset
+  title: "WASP: Adversarial Process-Injection Snapshots from Trusted Windows Binaries"
+  version: "1"
+  year: 2026
+  doi: "10.17632/gj8vp49xm5.1"
+  url: "https://doi.org/10.17632/gj8vp49xm5.1"
+  authors:
+    - family-names: "Jeremiah"
+      given-names: "Daniel"
+    - family-names: "Rafiq"
+      given-names: "Husnain"
+    - family-names: "Ta"
+      given-names: "Vinh Thong"
+    - family-names: "Okoyeigbo"
+      given-names: "Obinna"
+    - family-names: "Akande"
+      given-names: "Jamiu"

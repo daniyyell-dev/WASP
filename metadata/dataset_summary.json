@@ -1,0 +1,710 @@
+{
+  "dataset_name": "WASP",
+  "release_version": "0.2.1",
+  "release_status": "published_mendeley_data_v1",
+  "feature_schema_version": "1.7.0",
+  "frozen_model_projection": "63 inputs: 45 v1.4-era core fields plus 18 derived ratios or capability flags",
+  "longitudinal_benign_dataset": {
+    "files_by_host": {
+      "windows10": {
+        "file": "data/longitudinal_benign_dataset/windows10.csv",
+        "rows": 22750,
+        "runs": 669,
+        "binaries": 225,
+        "columns": 164
+      },
+      "win11_x64": {
+        "file": "data/longitudinal_benign_dataset/win11_x64.csv",
+        "rows": 22347,
+        "runs": 694,
+        "binaries": 238,
+        "columns": 164
+      },
+      "win2016_dc": {
+        "file": "data/longitudinal_benign_dataset/win2016_dc.csv",
+        "rows": 25501,
+        "runs": 739,
+        "binaries": 249,
+        "columns": 164
+      }
+    },
+    "rows": 70598,
+    "runs": 2102,
+    "binary_host_pairs": 712
+  },
+  "controlled_paired_dataset": {
+    "files": {
+      "controlled_clean": "data/controlled_paired_dataset/controlled_clean_snapshots.csv",
+      "injection_labelled": "data/controlled_paired_dataset/injection_labelled_snapshots.csv"
+    },
+    "rows": 3770,
+    "columns": 176,
+    "controlled_clean_rows": 1874,
+    "injection_labelled_rows": 1896,
+    "controlled_clean_flagged_rows": 7,
+    "injection_labelled_flagged_rows": 1712,
+    "scoreable_experiments": 60,
+    "unscored_experiments": 3,
+    "scoreable_controlled_clean_rows": 1736,
+    "scoreable_injection_labelled_rows": 1758,
+    "experiments": [
+      {
+        "experiment_id": "eval-001",
+        "payload_family": "NimPlant",
+        "technique_label": "early_bird_apc",
+        "binary_id": "notepad_x64",
+        "model_binary_id": "notepad_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-002",
+        "payload_family": "NimPlant",
+        "technique_label": "process_hollowing",
+        "binary_id": "mspaint_x64",
+        "model_binary_id": "mspaint_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 16,
+        "injection_labelled_rows": 19
+      },
+      {
+        "experiment_id": "eval-003",
+        "payload_family": "NimPlant",
+        "technique_label": "remote_thread",
+        "binary_id": "charmap_x64",
+        "model_binary_id": "charmap_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 18,
+        "injection_labelled_rows": 20
+      },
+      {
+        "experiment_id": "eval-004",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "early_bird_apc",
+        "binary_id": "cliconfg_x64",
+        "model_binary_id": "cliconfg_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 30,
+        "injection_labelled_rows": 30
+      },
+      {
+        "experiment_id": "eval-005",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "process_hollowing",
+        "binary_id": "cleanmgr_x64",
+        "model_binary_id": "cleanmgr_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 25,
+        "injection_labelled_rows": 25
+      },
+      {
+        "experiment_id": "eval-006",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "remote_thread",
+        "binary_id": "control_x64",
+        "model_binary_id": "control_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 29,
+        "injection_labelled_rows": 29
+      },
+      {
+        "experiment_id": "eval-007",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "queue_apc",
+        "binary_id": "dialer_x64",
+        "model_binary_id": "dialer_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 31,
+        "injection_labelled_rows": 30
+      },
+      {
+        "experiment_id": "eval-008",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "thread_hijack",
+        "binary_id": "notepad_x64",
+        "model_binary_id": "notepad_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 31,
+        "injection_labelled_rows": 30
+      },
+      {
+        "experiment_id": "eval-009",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "rtl_create_user_thread",
+        "binary_id": "charmap_x64",
+        "model_binary_id": "charmap_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 30,
+        "injection_labelled_rows": 29
+      },
+      {
+        "experiment_id": "eval-010",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "module_stomp",
+        "binary_id": "mspaint_x64",
+        "model_binary_id": "mspaint_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 27,
+        "injection_labelled_rows": 27
+      },
+      {
+        "experiment_id": "eval-011",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "reflective_dll",
+        "binary_id": "pkgmgr_x64",
+        "model_binary_id": "pkgmgr_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 31,
+        "injection_labelled_rows": 30
+      },
+      {
+        "experiment_id": "eval-012",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "nt_create_thread_ex",
+        "binary_id": "cloudexperiencehostbroker_x64",
+        "model_binary_id": "cloudexperiencehostbroker_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 31,
+        "injection_labelled_rows": 30
+      },
+      {
+        "experiment_id": "eval-013",
+        "payload_family": "AsyncRAT",
+        "technique_label": "early_bird_apc",
+        "binary_id": "charmap_x86",
+        "model_binary_id": null,
+        "score_status": "binary_not_enrolled",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-014",
+        "payload_family": "AsyncRAT",
+        "technique_label": "process_hollowing",
+        "binary_id": "mspaint_x86",
+        "model_binary_id": "mspaint_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-015",
+        "payload_family": "AsyncRAT",
+        "technique_label": "remote_thread",
+        "binary_id": "notepad_x86",
+        "model_binary_id": "notepad_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 19,
+        "injection_labelled_rows": 13
+      },
+      {
+        "experiment_id": "eval-016",
+        "payload_family": "Quasar RAT",
+        "technique_label": "early_bird_apc",
+        "binary_id": "charmap_x86",
+        "model_binary_id": null,
+        "score_status": "binary_not_enrolled",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-017",
+        "payload_family": "Quasar RAT",
+        "technique_label": "process_hollowing",
+        "binary_id": "charmap_x86",
+        "model_binary_id": null,
+        "score_status": "binary_not_enrolled",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-018",
+        "payload_family": "Quasar RAT",
+        "technique_label": "remote_thread",
+        "binary_id": "notepad_x86",
+        "model_binary_id": "notepad_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 17,
+        "injection_labelled_rows": 15
+      },
+      {
+        "experiment_id": "eval-019",
+        "payload_family": "NimPlant",
+        "technique_label": "early_bird_apc",
+        "binary_id": "cloudexperiencehostbroker_x64",
+        "model_binary_id": "cloudexperiencehostbroker_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 7,
+        "injection_labelled_rows": 12
+      },
+      {
+        "experiment_id": "eval-020",
+        "payload_family": "NimPlant",
+        "technique_label": "early_bird_apc",
+        "binary_id": "notepad_x64",
+        "model_binary_id": "notepad_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 12,
+        "injection_labelled_rows": 11
+      },
+      {
+        "experiment_id": "eval-021",
+        "payload_family": "NimPlant",
+        "technique_label": "process_hollowing",
+        "binary_id": "mspaint_x64",
+        "model_binary_id": "mspaint_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 10,
+        "injection_labelled_rows": 12
+      },
+      {
+        "experiment_id": "eval-022",
+        "payload_family": "NimPlant",
+        "technique_label": "process_hollowing",
+        "binary_id": "notepad_x64",
+        "model_binary_id": "notepad_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 12,
+        "injection_labelled_rows": 12
+      },
+      {
+        "experiment_id": "eval-023",
+        "payload_family": "NimPlant",
+        "technique_label": "process_hollowing",
+        "binary_id": "pkgmgr_x64",
+        "model_binary_id": "pkgmgr_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 8,
+        "injection_labelled_rows": 8
+      },
+      {
+        "experiment_id": "eval-024",
+        "payload_family": "NimPlant",
+        "technique_label": "remote_thread",
+        "binary_id": "charmap_x64",
+        "model_binary_id": "charmap_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 8,
+        "injection_labelled_rows": 11
+      },
+      {
+        "experiment_id": "eval-025",
+        "payload_family": "NimPlant",
+        "technique_label": "remote_thread",
+        "binary_id": "cliconfg_x64",
+        "model_binary_id": "cliconfg_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 15,
+        "injection_labelled_rows": 14
+      },
+      {
+        "experiment_id": "eval-026",
+        "payload_family": "NimPlant",
+        "technique_label": "remote_thread",
+        "binary_id": "notepad_x64",
+        "model_binary_id": "notepad_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 13,
+        "injection_labelled_rows": 13
+      },
+      {
+        "experiment_id": "eval-027",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "early_bird_apc",
+        "binary_id": "notepad_x64",
+        "model_binary_id": "notepad_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 24,
+        "injection_labelled_rows": 25
+      },
+      {
+        "experiment_id": "eval-028",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "process_hollowing",
+        "binary_id": "mspaint_x64",
+        "model_binary_id": "mspaint_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 16,
+        "injection_labelled_rows": 15
+      },
+      {
+        "experiment_id": "eval-029",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "remote_thread",
+        "binary_id": "charmap_x64",
+        "model_binary_id": "charmap_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 26,
+        "injection_labelled_rows": 25
+      },
+      {
+        "experiment_id": "eval-030",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "queue_apc",
+        "binary_id": "cliconfg_x64",
+        "model_binary_id": "cliconfg_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 26,
+        "injection_labelled_rows": 25
+      },
+      {
+        "experiment_id": "eval-031",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "thread_hijack",
+        "binary_id": "mspaint_x64",
+        "model_binary_id": "mspaint_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 23,
+        "injection_labelled_rows": 24
+      },
+      {
+        "experiment_id": "eval-032",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "rtl_create_user_thread",
+        "binary_id": "pkgmgr_x64",
+        "model_binary_id": "pkgmgr_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 26,
+        "injection_labelled_rows": 25
+      },
+      {
+        "experiment_id": "eval-033",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "module_stomp",
+        "binary_id": "cloudexperiencehostbroker_x64",
+        "model_binary_id": "cloudexperiencehostbroker_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 26,
+        "injection_labelled_rows": 26
+      },
+      {
+        "experiment_id": "eval-034",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "reflective_dll",
+        "binary_id": "notepad_x64",
+        "model_binary_id": "notepad_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 24,
+        "injection_labelled_rows": 25
+      },
+      {
+        "experiment_id": "eval-035",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "nt_create_thread_ex",
+        "binary_id": "charmap_x64",
+        "model_binary_id": "charmap_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 24,
+        "injection_labelled_rows": 23
+      },
+      {
+        "experiment_id": "eval-036",
+        "payload_family": "AsyncRAT",
+        "technique_label": "early_bird_apc",
+        "binary_id": "dialer_x86",
+        "model_binary_id": "dialer_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 16,
+        "injection_labelled_rows": 15
+      },
+      {
+        "experiment_id": "eval-037",
+        "payload_family": "AsyncRAT",
+        "technique_label": "process_hollowing",
+        "binary_id": "charmap_x86",
+        "model_binary_id": "charmap_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 10,
+        "injection_labelled_rows": 12
+      },
+      {
+        "experiment_id": "eval-038",
+        "payload_family": "AsyncRAT",
+        "technique_label": "remote_thread",
+        "binary_id": "mobsync_x86",
+        "model_binary_id": "mobsync_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 7,
+        "injection_labelled_rows": 9
+      },
+      {
+        "experiment_id": "eval-039",
+        "payload_family": "AsyncRAT",
+        "technique_label": "remote_thread",
+        "binary_id": "notepad_x86",
+        "model_binary_id": "notepad_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 13,
+        "injection_labelled_rows": 11
+      },
+      {
+        "experiment_id": "eval-040",
+        "payload_family": "Quasar RAT",
+        "technique_label": "early_bird_apc",
+        "binary_id": "cleanmgr_x86",
+        "model_binary_id": "cleanmgr_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 12,
+        "injection_labelled_rows": 13
+      },
+      {
+        "experiment_id": "eval-041",
+        "payload_family": "Quasar RAT",
+        "technique_label": "process_hollowing",
+        "binary_id": "charmap_x86",
+        "model_binary_id": "charmap_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 12,
+        "injection_labelled_rows": 12
+      },
+      {
+        "experiment_id": "eval-042",
+        "payload_family": "Quasar RAT",
+        "technique_label": "process_hollowing",
+        "binary_id": "notepad_x86",
+        "model_binary_id": "notepad_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 12,
+        "injection_labelled_rows": 13
+      },
+      {
+        "experiment_id": "eval-043",
+        "payload_family": "Quasar RAT",
+        "technique_label": "remote_thread",
+        "binary_id": "charmap_x86",
+        "model_binary_id": "charmap_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 12,
+        "injection_labelled_rows": 10
+      },
+      {
+        "experiment_id": "eval-044",
+        "payload_family": "Quasar RAT",
+        "technique_label": "remote_thread",
+        "binary_id": "mspaint_x86",
+        "model_binary_id": "mspaint_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 12,
+        "injection_labelled_rows": 9
+      },
+      {
+        "experiment_id": "eval-045",
+        "payload_family": "Quasar RAT",
+        "technique_label": "remote_thread",
+        "binary_id": "systempropertieshardware_x86",
+        "model_binary_id": "systempropertieshardware_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 12,
+        "injection_labelled_rows": 11
+      },
+      {
+        "experiment_id": "eval-046",
+        "payload_family": "NimPlant",
+        "technique_label": "early_bird_apc",
+        "binary_id": "dmcfghost_x64",
+        "model_binary_id": "dmcfghost_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 19,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-047",
+        "payload_family": "NimPlant",
+        "technique_label": "process_hollowing",
+        "binary_id": "sigverif_x64",
+        "model_binary_id": "sigverif_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-048",
+        "payload_family": "NimPlant",
+        "technique_label": "remote_thread",
+        "binary_id": "mpnotify_x64",
+        "model_binary_id": "mpnotify_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-049",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "early_bird_apc",
+        "binary_id": "control_x64",
+        "model_binary_id": "control_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 61,
+        "injection_labelled_rows": 61
+      },
+      {
+        "experiment_id": "eval-050",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "process_hollowing",
+        "binary_id": "pkgmgr_x64",
+        "model_binary_id": "pkgmgr_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-051",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "remote_thread",
+        "binary_id": "cliconfg_x64",
+        "model_binary_id": "cliconfg_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 61,
+        "injection_labelled_rows": 61
+      },
+      {
+        "experiment_id": "eval-052",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "queue_apc",
+        "binary_id": "cliconfg_x64",
+        "model_binary_id": "cliconfg_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-053",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "thread_hijack",
+        "binary_id": "cliconfg_x64",
+        "model_binary_id": "cliconfg_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-054",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "rtl_create_user_thread",
+        "binary_id": "sigverif_x64",
+        "model_binary_id": "sigverif_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 61,
+        "injection_labelled_rows": 61
+      },
+      {
+        "experiment_id": "eval-055",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "module_stomp",
+        "binary_id": "control_x64",
+        "model_binary_id": "control_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 61,
+        "injection_labelled_rows": 61
+      },
+      {
+        "experiment_id": "eval-056",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "reflective_dll",
+        "binary_id": "cliconfg_x64",
+        "model_binary_id": "cliconfg_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 61,
+        "injection_labelled_rows": 61
+      },
+      {
+        "experiment_id": "eval-057",
+        "payload_family": "Cobalt Strike",
+        "technique_label": "nt_create_thread_ex",
+        "binary_id": "pkgmgr_x64",
+        "model_binary_id": "pkgmgr_x64",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 61,
+        "injection_labelled_rows": 61
+      },
+      {
+        "experiment_id": "eval-058",
+        "payload_family": "AsyncRAT",
+        "technique_label": "early_bird_apc",
+        "binary_id": "msinfo32_x86",
+        "model_binary_id": "msinfo32_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-059",
+        "payload_family": "AsyncRAT",
+        "technique_label": "process_hollowing",
+        "binary_id": "wusa_x86",
+        "model_binary_id": "wusa_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-060",
+        "payload_family": "AsyncRAT",
+        "technique_label": "remote_thread",
+        "binary_id": "systempropertiescomputername_x86",
+        "model_binary_id": "systempropertiescomputername_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-061",
+        "payload_family": "Quasar RAT",
+        "technique_label": "early_bird_apc",
+        "binary_id": "systempropertiesdataexecutionprevention_x86",
+        "model_binary_id": "systempropertiesdataexecutionprevention_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-062",
+        "payload_family": "Quasar RAT",
+        "technique_label": "process_hollowing",
+        "binary_id": "dccw_x86",
+        "model_binary_id": "dccw_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      },
+      {
+        "experiment_id": "eval-063",
+        "payload_family": "Quasar RAT",
+        "technique_label": "remote_thread",
+        "binary_id": "mobsync_x86",
+        "model_binary_id": "mobsync_x86",
+        "score_status": "scoreable",
+        "controlled_clean_rows": 46,
+        "injection_labelled_rows": 46
+      }
+    ]
+  },
+  "total_rows": 74368,
+  "public_release_boundary": {
+    "included": [
+      "numeric runtime features",
+      "missingness masks",
+      "pseudonymous run grouping",
+      "experiment factors",
+      "snapshot reconstruction scores",
+      "descriptive evaluation metrics",
+      "sanitised model receipts"
+    ],
+    "excluded": [
+      "Windows executables",
+      "malware or payload binaries",
+      "raw JSONL",
+      "process identifiers",
+      "timestamps",
+      "host identifiers",
+      "filesystem paths",
+      "IP addresses",
+      "credentials",
+      "C2 configuration",
+      "raw memory content",
+      "model checkpoints",
+      "executable code"
+    ]
+  }
+}

@@ -1,0 +1,1016 @@
+{
+  "release_schema_version": "1.0.0",
+  "feature_schema_version": "1.7.0",
+  "frozen_model_projection": "63 inputs: 45 v1.4-era core fields plus 18 derived ratios or capability flags; see model bundle receipts",
+  "row_unit": "process_snapshot",
+  "core_feature_count": 70,
+  "derived_feature_count": 18,
+  "missingness": "Every core feature has an explicit binary <feature>__missing indicator. A blank feature value always has mask 1; missing is not zero. The 22 schema-evolution fields unavailable in the longitudinal benign collection are blank with mask 1.",
+  "core_features": [
+    {
+      "name": "elapsed_since_start_ms",
+      "source_fields": [
+        "elapsed_since_start_ms"
+      ],
+      "type": "number",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "working_set_bytes",
+      "source_fields": [
+        "working_set_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "private_bytes",
+      "source_fields": [
+        "private_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "virtual_size_bytes",
+      "source_fields": [
+        "virtual_size_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pagefile_bytes",
+      "source_fields": [
+        "pagefile_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "peak_working_set_bytes",
+      "source_fields": [
+        "peak_working_set_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "handle_count",
+      "source_fields": [
+        "handle_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "thread_count",
+      "source_fields": [
+        "thread_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "thread_count_delta",
+      "source_fields": [
+        "thread_count"
+      ],
+      "type": "integer",
+      "range": {},
+      "transform": "signed_log1p_absolute_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cpu_user_delta_ms",
+      "source_fields": [
+        "cpu_user_time_ms"
+      ],
+      "type": "number",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "adjacent_delta_then_log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cpu_kernel_delta_ms",
+      "source_fields": [
+        "cpu_kernel_time_ms"
+      ],
+      "type": "number",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "adjacent_delta_then_log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "io_read_delta_bytes",
+      "source_fields": [
+        "io_read_bytes_cumulative"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "adjacent_delta_then_log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "io_write_delta_bytes",
+      "source_fields": [
+        "io_write_bytes_cumulative"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "adjacent_delta_then_log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "io_other_delta_bytes",
+      "source_fields": [
+        "io_other_bytes_cumulative"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "adjacent_delta_then_log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mapped_region_count",
+      "source_fields": [
+        "mapped_region_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "committed_region_count",
+      "source_fields": [
+        "committed_region_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "executable_region_count",
+      "source_fields": [
+        "executable_region_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "writable_executable_region_count",
+      "source_fields": [
+        "writable_executable_region_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "private_executable_region_count",
+      "source_fields": [
+        "private_executable_region_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "executable_private_bytes",
+      "source_fields": [
+        "executable_private_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "writable_executable_bytes",
+      "source_fields": [
+        "writable_executable_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "image_region_bytes",
+      "source_fields": [
+        "image_region_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mapped_region_bytes",
+      "source_fields": [
+        "mapped_region_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "private_region_bytes",
+      "source_fields": [
+        "private_region_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.0.0"
+    },
+    {
+      "name": "rwx_region_count",
+      "source_fields": [
+        "rwx_region_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "rwx_bytes",
+      "source_fields": [
+        "rwx_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "rx_private_region_count",
+      "source_fields": [
+        "rx_private_region_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "rx_private_bytes",
+      "source_fields": [
+        "rx_private_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "largest_private_executable_region_bytes",
+      "source_fields": [
+        "largest_private_executable_region_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "private_executable_region_ge_64k_count",
+      "source_fields": [
+        "private_executable_region_ge_64k_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "non_image_executable_bytes",
+      "source_fields": [
+        "non_image_executable_bytes"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "private_executable_allocation_count",
+      "source_fields": [
+        "private_executable_allocation_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "page_fault_count",
+      "source_fields": [
+        "page_fault_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "module_count",
+      "source_fields": [
+        "module_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "non_system_module_count",
+      "source_fields": [
+        "non_system_module_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "tcp_connection_count",
+      "source_fields": [
+        "tcp_connection_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.2.0"
+    },
+    {
+      "name": "tcp_listening_count",
+      "source_fields": [
+        "tcp_listening_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.3.0"
+    },
+    {
+      "name": "udp_endpoint_count",
+      "source_fields": [
+        "udp_endpoint_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.3.0"
+    },
+    {
+      "name": "rdp_tcp_connection_count",
+      "source_fields": [
+        "rdp_tcp_connection_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.3.0"
+    },
+    {
+      "name": "smb_tcp_connection_count",
+      "source_fields": [
+        "smb_tcp_connection_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.3.0"
+    },
+    {
+      "name": "image_path_backed_exec_ratio",
+      "source_fields": [
+        "image_path_backed_exec_ratio"
+      ],
+      "type": "number",
+      "range": {
+        "minimum": 0,
+        "maximum": 1
+      },
+      "transform": "fixed_epsilon_logit_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.4.0"
+    },
+    {
+      "name": "peb_image_base_is_private",
+      "source_fields": [
+        "peb_image_base_is_private"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0,
+        "maximum": 1
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.4.0"
+    },
+    {
+      "name": "peb_image_base_non_image",
+      "source_fields": [
+        "peb_image_base_non_image"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0,
+        "maximum": 1
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.4.0"
+    },
+    {
+      "name": "peb_image_base_executable",
+      "source_fields": [
+        "peb_image_base_executable"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0,
+        "maximum": 1
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.4.0"
+    },
+    {
+      "name": "thread_context_private_exec_count",
+      "source_fields": [
+        "thread_context_private_exec_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.4.0"
+    },
+    {
+      "name": "thread_context_unmapped_count",
+      "source_fields": [
+        "thread_context_unmapped_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.4.0"
+    },
+    {
+      "name": "unsigned_image_mapping_count",
+      "source_fields": [
+        "unsigned_image_mapping_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.1.0"
+    },
+    {
+      "name": "thread_start_private_exec_count",
+      "source_fields": [
+        "thread_start_private_exec_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.1.0"
+    },
+    {
+      "name": "thread_start_unmapped_count",
+      "source_fields": [
+        "thread_start_unmapped_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.1.0"
+    },
+    {
+      "name": "thread_context_image_backed_count",
+      "source_fields": [
+        "thread_context_image_backed_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.5.0"
+    },
+    {
+      "name": "suspended_thread_count",
+      "source_fields": [
+        "suspended_thread_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.5.0"
+    },
+    {
+      "name": "outbound_tcp_connection_count",
+      "source_fields": [
+        "outbound_tcp_connection_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.5.0"
+    },
+    {
+      "name": "non_loopback_tcp_connection_count",
+      "source_fields": [
+        "non_loopback_tcp_connection_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.5.0"
+    },
+    {
+      "name": "distinct_remote_endpoint_count",
+      "source_fields": [
+        "distinct_remote_endpoint_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.6.0"
+    },
+    {
+      "name": "distinct_remote_port_count",
+      "source_fields": [
+        "distinct_remote_port_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.6.0"
+    },
+    {
+      "name": "max_outbound_remote_port",
+      "source_fields": [
+        "max_outbound_remote_port"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0,
+        "maximum": 65535
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.6.0"
+    },
+    {
+      "name": "outbound_remote_port_checksum",
+      "source_fields": [
+        "outbound_remote_port_checksum"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "core_required",
+      "version": "1.6.0"
+    },
+    {
+      "name": "etw_create_remote_thread_count",
+      "source_fields": [
+        "etw_create_remote_thread_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.6.0"
+    },
+    {
+      "name": "etw_cross_process_access_count",
+      "source_fields": [
+        "etw_cross_process_access_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.6.0"
+    },
+    {
+      "name": "etw_image_load_count",
+      "source_fields": [
+        "etw_image_load_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.6.0"
+    },
+    {
+      "name": "etw_kernel_audit_api_count",
+      "source_fields": [
+        "etw_kernel_audit_api_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.6.0"
+    },
+    {
+      "name": "etw_syscall_event_count",
+      "source_fields": [
+        "etw_syscall_event_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.6.0"
+    },
+    {
+      "name": "etw_distinct_event_id_count",
+      "source_fields": [
+        "etw_distinct_event_id_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.6.0"
+    },
+    {
+      "name": "etw_virtual_alloc_ex_count",
+      "source_fields": [
+        "etw_virtual_alloc_ex_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.7.0"
+    },
+    {
+      "name": "etw_write_process_memory_count",
+      "source_fields": [
+        "etw_write_process_memory_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.7.0"
+    },
+    {
+      "name": "etw_nt_write_virtual_memory_count",
+      "source_fields": [
+        "etw_nt_write_virtual_memory_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.7.0"
+    },
+    {
+      "name": "etw_virtual_protect_ex_count",
+      "source_fields": [
+        "etw_virtual_protect_ex_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.7.0"
+    },
+    {
+      "name": "etw_nt_create_thread_ex_count",
+      "source_fields": [
+        "etw_nt_create_thread_ex_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.7.0"
+    },
+    {
+      "name": "etw_nt_queue_apc_thread_count",
+      "source_fields": [
+        "etw_nt_queue_apc_thread_count"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.7.0"
+    },
+    {
+      "name": "kernel_audit_api_sequence_length",
+      "source_fields": [
+        "kernel_audit_api_sequence_length"
+      ],
+      "type": "integer",
+      "range": {
+        "minimum": 0
+      },
+      "transform": "log1p_then_robust_scale",
+      "tier": "optional_extension",
+      "version": "1.7.0"
+    }
+  ],
+  "derived_features": [
+    {
+      "name": "wx_region_ratio",
+      "type": "number",
+      "definition": "Writable-executable regions divided by executable regions."
+    },
+    {
+      "name": "priv_exec_region_ratio",
+      "type": "number",
+      "definition": "Private executable regions divided by executable regions."
+    },
+    {
+      "name": "wx_bytes_ratio",
+      "type": "number",
+      "definition": "Writable-executable bytes divided by private bytes plus one."
+    },
+    {
+      "name": "exec_private_bytes_ratio",
+      "type": "number",
+      "definition": "Executable private bytes divided by private bytes plus one."
+    },
+    {
+      "name": "cap_has_wx",
+      "type": "number",
+      "definition": "1 when at least one writable-executable region is present."
+    },
+    {
+      "name": "cap_has_private_exec",
+      "type": "number",
+      "definition": "1 when at least one private executable region is present."
+    },
+    {
+      "name": "cap_has_rwx",
+      "type": "number",
+      "definition": "1 when at least one PAGE_EXECUTE_READWRITE region is present."
+    },
+    {
+      "name": "cap_has_rx_private",
+      "type": "number",
+      "definition": "1 when at least one private executable-read region is present."
+    },
+    {
+      "name": "cap_has_tcp",
+      "type": "number",
+      "definition": "1 when at least one active TCP connection is present."
+    },
+    {
+      "name": "cap_has_udp",
+      "type": "number",
+      "definition": "1 when at least one UDP endpoint is present."
+    },
+    {
+      "name": "cap_has_rdp_tcp",
+      "type": "number",
+      "definition": "1 when an RDP-port TCP row is present."
+    },
+    {
+      "name": "cap_has_smb_tcp",
+      "type": "number",
+      "definition": "1 when an SMB-port TCP row is present."
+    },
+    {
+      "name": "cap_has_non_system_module",
+      "type": "number",
+      "definition": "1 when a module outside standard Windows system paths is present."
+    },
+    {
+      "name": "cap_peb_image_base_private",
+      "type": "number",
+      "definition": "1 when the PEB image base is in private memory."
+    },
+    {
+      "name": "cap_peb_image_base_non_image",
+      "type": "number",
+      "definition": "1 when the PEB image base is not MEM_IMAGE."
+    },
+    {
+      "name": "cap_thread_context_private_exec",
+      "type": "number",
+      "definition": "1 when a thread instruction pointer is in private executable memory."
+    },
+    {
+      "name": "cap_thread_start_private_exec",
+      "type": "number",
+      "definition": "1 when a queryable thread start is in private executable memory."
+    },
+    {
+      "name": "cap_thread_start_unmapped",
+      "type": "number",
+      "definition": "1 when a queryable thread start is outside image or mapped memory."
+    }
+  ]
+}

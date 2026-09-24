@@ -1,0 +1,64 @@
+experiment_id,host_model,payload_family,technique_label,binary_id,model_binary_id,experiment_status,controlled_clean_snapshots_released,injection_labelled_snapshots_released,release_note
+eval-001,windows10,NimPlant,early_bird_apc,notepad_x64,notepad_x64,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-002,windows10,NimPlant,process_hollowing,mspaint_x64,mspaint_x64,released_quantitative_pair,16,19,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-003,windows10,NimPlant,remote_thread,charmap_x64,charmap_x64,released_quantitative_pair,18,20,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-004,windows10,Cobalt Strike,early_bird_apc,cliconfg_x64,cliconfg_x64,released_quantitative_pair,30,30,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-005,windows10,Cobalt Strike,process_hollowing,cleanmgr_x64,cleanmgr_x64,released_quantitative_pair,25,25,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-006,windows10,Cobalt Strike,remote_thread,control_x64,control_x64,released_quantitative_pair,29,29,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-007,windows10,Cobalt Strike,queue_apc,dialer_x64,dialer_x64,released_quantitative_pair,31,30,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-008,windows10,Cobalt Strike,thread_hijack,notepad_x64,notepad_x64,released_quantitative_pair,31,30,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-009,windows10,Cobalt Strike,rtl_create_user_thread,charmap_x64,charmap_x64,released_quantitative_pair,30,29,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-010,windows10,Cobalt Strike,module_stomp,mspaint_x64,mspaint_x64,released_quantitative_pair,27,27,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-011,windows10,Cobalt Strike,reflective_dll,pkgmgr_x64,pkgmgr_x64,released_quantitative_pair,31,30,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-012,windows10,Cobalt Strike,nt_create_thread_ex,cloudexperiencehostbroker_x64,cloudexperiencehostbroker_x64,released_quantitative_pair,31,30,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-013,windows10,AsyncRAT,early_bird_apc,charmap_x86,,released_structural_only_pair,46,46,Matched side-by-side telemetry retained without AE scores because this binary was not enrolled in the matching host model.
+eval-014,windows10,AsyncRAT,process_hollowing,mspaint_x86,mspaint_x86,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-015,windows10,AsyncRAT,remote_thread,notepad_x86,notepad_x86,released_quantitative_pair,19,13,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-016,windows10,Quasar RAT,early_bird_apc,charmap_x86,,released_structural_only_pair,46,46,Matched side-by-side telemetry retained without AE scores because this binary was not enrolled in the matching host model.
+eval-017,windows10,Quasar RAT,process_hollowing,charmap_x86,,released_structural_only_pair,46,46,Matched side-by-side telemetry retained without AE scores because this binary was not enrolled in the matching host model.
+eval-018,windows10,Quasar RAT,remote_thread,notepad_x86,notepad_x86,released_quantitative_pair,17,15,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-019,win2016_dc,NimPlant,early_bird_apc,cloudexperiencehostbroker_x64,cloudexperiencehostbroker_x64,released_quantitative_pair,7,12,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-020,win2016_dc,NimPlant,early_bird_apc,notepad_x64,notepad_x64,released_quantitative_pair,12,11,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-021,win2016_dc,NimPlant,process_hollowing,mspaint_x64,mspaint_x64,released_quantitative_pair,10,12,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-022,win2016_dc,NimPlant,process_hollowing,notepad_x64,notepad_x64,released_quantitative_pair,12,12,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-023,win2016_dc,NimPlant,process_hollowing,pkgmgr_x64,pkgmgr_x64,released_quantitative_pair,8,8,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-024,win2016_dc,NimPlant,remote_thread,charmap_x64,charmap_x64,released_quantitative_pair,8,11,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-025,win2016_dc,NimPlant,remote_thread,cliconfg_x64,cliconfg_x64,released_quantitative_pair,15,14,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-026,win2016_dc,NimPlant,remote_thread,notepad_x64,notepad_x64,released_quantitative_pair,13,13,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-027,win2016_dc,Cobalt Strike,early_bird_apc,notepad_x64,notepad_x64,released_quantitative_pair,24,25,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-028,win2016_dc,Cobalt Strike,process_hollowing,mspaint_x64,mspaint_x64,released_quantitative_pair,16,15,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-029,win2016_dc,Cobalt Strike,remote_thread,charmap_x64,charmap_x64,released_quantitative_pair,26,25,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-030,win2016_dc,Cobalt Strike,queue_apc,cliconfg_x64,cliconfg_x64,released_quantitative_pair,26,25,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-031,win2016_dc,Cobalt Strike,thread_hijack,mspaint_x64,mspaint_x64,released_quantitative_pair,23,24,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-032,win2016_dc,Cobalt Strike,rtl_create_user_thread,pkgmgr_x64,pkgmgr_x64,released_quantitative_pair,26,25,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-033,win2016_dc,Cobalt Strike,module_stomp,cloudexperiencehostbroker_x64,cloudexperiencehostbroker_x64,released_quantitative_pair,26,26,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-034,win2016_dc,Cobalt Strike,reflective_dll,notepad_x64,notepad_x64,released_quantitative_pair,24,25,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-035,win2016_dc,Cobalt Strike,nt_create_thread_ex,charmap_x64,charmap_x64,released_quantitative_pair,24,23,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-036,win2016_dc,AsyncRAT,early_bird_apc,dialer_x86,dialer_x86,released_quantitative_pair,16,15,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-037,win2016_dc,AsyncRAT,process_hollowing,charmap_x86,charmap_x86,released_quantitative_pair,10,12,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-038,win2016_dc,AsyncRAT,remote_thread,mobsync_x86,mobsync_x86,released_quantitative_pair,7,9,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-039,win2016_dc,AsyncRAT,remote_thread,notepad_x86,notepad_x86,released_quantitative_pair,13,11,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-040,win2016_dc,Quasar RAT,early_bird_apc,cleanmgr_x86,cleanmgr_x86,released_quantitative_pair,12,13,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-041,win2016_dc,Quasar RAT,process_hollowing,charmap_x86,charmap_x86,released_quantitative_pair,12,12,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-042,win2016_dc,Quasar RAT,process_hollowing,notepad_x86,notepad_x86,released_quantitative_pair,12,13,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-043,win2016_dc,Quasar RAT,remote_thread,charmap_x86,charmap_x86,released_quantitative_pair,12,10,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-044,win2016_dc,Quasar RAT,remote_thread,mspaint_x86,mspaint_x86,released_quantitative_pair,12,9,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-045,win2016_dc,Quasar RAT,remote_thread,systempropertieshardware_x86,systempropertieshardware_x86,released_quantitative_pair,12,11,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-046,win11_x64,NimPlant,early_bird_apc,dmcfghost_x64,dmcfghost_x64,released_quantitative_pair,19,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-047,win11_x64,NimPlant,process_hollowing,sigverif_x64,sigverif_x64,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-048,win11_x64,NimPlant,remote_thread,mpnotify_x64,mpnotify_x64,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-049,win11_x64,Cobalt Strike,early_bird_apc,control_x64,control_x64,released_quantitative_pair,61,61,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-050,win11_x64,Cobalt Strike,process_hollowing,pkgmgr_x64,pkgmgr_x64,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-051,win11_x64,Cobalt Strike,remote_thread,cliconfg_x64,cliconfg_x64,released_quantitative_pair,61,61,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-052,win11_x64,Cobalt Strike,queue_apc,cliconfg_x64,cliconfg_x64,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-053,win11_x64,Cobalt Strike,thread_hijack,cliconfg_x64,cliconfg_x64,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-054,win11_x64,Cobalt Strike,rtl_create_user_thread,sigverif_x64,sigverif_x64,released_quantitative_pair,61,61,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-055,win11_x64,Cobalt Strike,module_stomp,control_x64,control_x64,released_quantitative_pair,61,61,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-056,win11_x64,Cobalt Strike,reflective_dll,cliconfg_x64,cliconfg_x64,released_quantitative_pair,61,61,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-057,win11_x64,Cobalt Strike,nt_create_thread_ex,pkgmgr_x64,pkgmgr_x64,released_quantitative_pair,61,61,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-058,win11_x64,AsyncRAT,early_bird_apc,msinfo32_x86,msinfo32_x86,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-059,win11_x64,AsyncRAT,process_hollowing,wusa_x86,wusa_x86,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-060,win11_x64,AsyncRAT,remote_thread,systempropertiescomputername_x86,systempropertiescomputername_x86,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-061,win11_x64,Quasar RAT,early_bird_apc,systempropertiesdataexecutionprevention_x86,systempropertiesdataexecutionprevention_x86,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-062,win11_x64,Quasar RAT,process_hollowing,dccw_x86,dccw_x86,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
+eval-063,win11_x64,Quasar RAT,remote_thread,mobsync_x86,mobsync_x86,released_quantitative_pair,46,46,Matched side-by-side telemetry with frozen matching-host AE scores.
