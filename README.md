@@ -1,11 +1,11 @@
-# WASP
+# WASP - Windows Adversarial Simulation of Process Injection
 
 ![WASP — Adversarial Process-Injection Snapshots](assets/images/wasp-c2-connections-thumbnail.png)
 
 Defensive analysis code, documentation and machine-readable metadata for the
 WASP dataset: repeated runtime snapshots of trusted Windows binaries under
 normal execution and controlled, authorised process-injection conditions.
-WASP stands for **Windows Adversarial Simulation of Process Injection**.
+**WASP** stands for **Windows Adversarial Simulation of Process Injection**.
 
 ## Dataset
 
