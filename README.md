@@ -1,4 +1,4 @@
-# WASP - Windows Adversarial Simulation of Process Injection
+## WASP - Windows Adversarial Simulation of Process Injection
 
 ![WASP — Adversarial Process-Injection Snapshots](assets/images/wasp-c2-connections-thumbnail.png)
 
